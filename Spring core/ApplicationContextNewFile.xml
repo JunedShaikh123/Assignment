@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+<context:annotation-config/>
+
+	<bean id="obja" class="com.springcoreQ1.Role " factory-method="getObjA"></bean>
+	
+	 <!--  Q2-->  
+ <bean id="ave" class="com.springcoreQ2.AveNum">
+<property name="num">
+<list>
+<value>38</value>
+<value>29</value>
+<value>44</value>
+<value>98</value>
+<value>99</value>
+</list>
+</property>
+</bean> 
+	
+	<bean id = "que3" class= "com.springcoreQ3.EMI">
+	<property name = "rate" value = "10"/> </bean>
+	 <!--<bean id= "que5" class= "com.springcoreQ5.Static"
+	factory-method ="getObj"></bean> -->
+	<!--  Q4  -->
+<bean id="emp1" class="com.springcoreQ4.Employee">
+<property name="empId" value="101"/>
+<property name="empName" value="ajay kumar"/>
+<property name="salary" value="23000"/>
+</bean>
+<bean id="dept" class="com.springcoreQ4.Department">
+<property name="deptId" value="1"/>
+<property name="deptName" value="Account"/>
+</bean>
+	<!--  Q5  -->
+<bean id="max1" class="com.springcoreQ5.Max">
+<property name="numbers">
+<list>
+<value>38</value>
+<value>29</value>
+<value>44</value>
+<value>98</value>
+<value>99</value>
+</list>
+</property>
+</bean>
+	<!-- Q6 -->
+	
+
+	<bean id = "vowl" class= "com.springcoreQ6.Vowel">
+	<property name = "st" >
+	<array>
+	<value>tv</value>
+	<value>computer</value>
+	<value>fly</value>
+	<value>laptop</value>
+	<value>crypt</value>
+	
+	
+	</array>
+	
+	
+	</property> </bean>
+	
+	<!-- Q7 -->
+	<bean id="array1" class="com.springcoreQ7.Array1">
+		<property name="a">
+			<array>
+				<value>40</value>
+				<value>50</value>
+				<value>60</value>
+				<value>70</value>
+
+			</array>
+
+		</property>
+
+	</bean>
+
+
+	<bean id="array2" class="com.springcoreQ7.Array2">
+		<property name="b">
+			<array>
+				<value>45</value>
+				<value>55</value>
+				<value>65</value>
+				<value>75</value>
+
+			</array>
+
+		</property>
+
+	</bean>
+	
+<!-- -Q8 -->
+
+<bean id = "que8" class = "com.springcoreQ8.Itm">
+<property name="itm">
+<list>
+<value>40</value>
+<value>50</value>
+<value>46</value>
+<value>60</value>
+<value>40</value>
+<value>66</value>
+<value>90</value>
+<value>67</value>
+<value>35</value>
+
+</list>
+
+
+
+
+</property>
+
+</bean> 
+
+<!--  Q9  -->
+<bean id="city1" class="com.springcoreQ9.City">
+<property name="fromCity" value="mumbai"/>
+<property name="toCity" value="bangalore"/>
+<property name="distance" value="992"/>
+</bean>
+<bean id="city2" class="com.springcoreQ9.City">
+<property name="fromCity" value="pune"/>
+<property name="toCity" value="kolhapur"/>
+<property name="distance" value="250"/>
+</bean>
+<bean id="city3" class="com.springcoreQ9.City">
+<property name="fromCity" value="pune"/>
+<property name="toCity" value="mumbai"/>
+<property name="distance" value="150"/>
+</bean>
+<bean id="city4" class="com.springcoreQ9.City">
+<property name="fromCity" value="indore"/>
+<property name="toCity" value="pune"/>
+<property name="distance" value="590"/>
+</bean>
+
+<!-- Q10 -->
+	
+	<!--<bean id="stu11" class="com.springcoreQ10.Student"> 
+		<constructor-arg>
+			<map>
+				<entry key="john" value="420"></entry>
+				<entry key="ajay" value="470"></entry>
+				<entry key="vijay" value="388"></entry>
+				<entry key="scott" value="299"></entry>
+				<entry key="pawan" value="477"></entry>
+				<entry key="kumar" value="300"></entry>
+			</map>
+		</constructor-arg> 
+	</bean>   -->
+ 
+ <!--  Q11  -->
+ <!--<bean id="stu11" class="com.springcoreQ11.Result">
+<constructor-arg value="67"/>
+<constructor-arg value="78"/>
+<constructor-arg value="82"/>
+<constructor-arg value="91"/>
+</bean>
+<bean id="student1" class="com.springcoreQ11.Student">
+<constructor-arg value="akash"/>
+<constructor-arg value="1"/>
+<constructor-arg value="1996/09/30"/>
+<constructor-arg value="12th"/>
+<constructor-arg value="A"/>
+<constructor-arg>
+<ref bean="result1"/>
+</constructor-arg>
+</bean>
+<bean id="result2" class="com.springcoreQ11.Result">
+<constructor-arg value="76"/>
+<constructor-arg value="88"/>
+<constructor-arg value="82"/>
+<constructor-arg value="96"/>
+</bean>
+<bean id="student2" class="com.springcoreQ11.Student">
+<constructor-arg value="rahul"/>
+<constructor-arg value="2" type="int"/>
+<constructor-arg value="1997/12/20"/>
+<constructor-arg value="12th"/>
+<constructor-arg value="A"/>
+<constructor-arg>
+<ref bean="result2"/>
+</constructor-arg>
+</bean>
+<bean id="result3" class="com.springcoreQ11.Result">
+<constructor-arg value="56"/>
+<constructor-arg value="65"/>
+<constructor-arg value="67"/>
+<constructor-arg value="61"/>
+</bean>
+<bean id="student3" class="com.springcoreQ11.Student">
+<constructor-arg value="amod"/>
+<constructor-arg value="3"/>
+<constructor-arg value="1998/1/18"/>
+<constructor-arg value="12th"/>
+<constructor-arg value="B"/>
+<constructor-arg>
+<ref bean="result3"/>
+</constructor-arg>
+</bean>
+<bean id="result4" class="com.springcoreQ11.Result">
+<constructor-arg value="56"/>
+<constructor-arg value="65"/>
+<constructor-arg value="88"/>
+<constructor-arg value="83"/>
+</bean>
+<bean id="student4" class="com.springcoreQ11.Student">
+<constructor-arg value="rohit"/>
+<constructor-arg value="4" type="int"/>
+<constructor-arg value="1997/03/28"/>
+<constructor-arg value="12th"/>
+<constructor-arg value="C"/>
+<constructor-arg>
+<ref bean="result4"/>
+</constructor-arg>
+</bean> -->
+
+<!--  Q12  -->
+<!-- <bean id="employee1" class="com.springcoreQ12.Employee">
+<property name="empId" value="101"/>
+<property name="empName" value="vijay patil"/>
+<property name="salary" value="25000"/>
+<property name="dept" ref="dept1"/>
+</bean>
+<bean id="dept1" class="com.springcoreQ12.Department">
+<property name="deptId" value="1"/>
+<property name="deptName" value="Account"/>
+</bean>
+<bean id="employee2" class="com.springcoreQ12.Employee">
+<property name="empId" value="102"/>
+<property name="empName" value="amit sharma"/>
+<property name="salary" value="21000"/>
+<property name="dept" ref="dept2"/>
+</bean>
+<bean id="dept2" class="com.springcoreQ12.Department">
+<property name="deptId" value="2"/>
+<property name="deptName" value="finance"/>
+</bean>
+<bean id="employee3" class="com.springcoreQ12.Employee">
+<property name="empId" value="103"/>
+<property name="empName" value="vijay kumar"/>
+<property name="salary" value="29000"/>
+<property name="dept" ref="dept3"/>
+</bean>
+<bean id="dept3" class="com.springcoreQ12.Department">
+<property name="deptId" value="2"/>
+<property name="deptName" value="finance"/>
+</bean>
+<bean id="employee4" class="com.springcoreQ12.Employee">
+<property name="empId" value="104"/>
+<property name="empName" value="amit pathak"/>
+<property name="salary" value="35000"/>
+<property name="dept" ref="dept4"/>
+</bean>
+<bean id="dept4" class="com.springcoreQ12.Department">
+<property name="deptId" value="1"/>
+<property name="deptName" value="Account"/>
+</bean> -->
+<!-- Q13 -->
+	
+	<bean id="movie1" class="com.springcoreQ13.Movie">
+		<property name="movieName" value="Dabang"></property>
+		<property name="timeSlot" value="7-10"></property>
+		<property name="ticketPrice" value="100"></property>
+	</bean>
+<!--  Q14  -->
+<bean id="circle" class="com.springcoreQ14.ShapeFactory" factory-method="getCircleObject"/>
+<bean id="rectangle" class="com.springcoreQ14.ShapeFactory" factory-method="getRectangleObject"/>
+<bean id="square" class="com.springcoreQ14.ShapeFactory" factory-method="getSquareObject"/>
+<!--  Q15  -->
+<bean id="cust1" class="com.springcoreQ15.Customer">
+<property name="custId" value="111"/>
+<property name="custName" value="ajay mohite"/>
+<property name="item" ref="item1"> </property>
+</bean>
+<bean id="item1" class="com.springcoreQ15.Item">
+<property name="itemId" value="123"/>
+<property name="itemName" value="white shirt"/>
+<property name="price" value="999"/>
+<property name="cat" ref="cat1"/>
+</bean>
+<bean id="cat1" class="com.springcoreQ15.Category">
+<property name="category" value="cloth"/>
+</bean>
+
+
+
+</beans>
